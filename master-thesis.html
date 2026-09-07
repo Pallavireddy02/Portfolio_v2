@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+    <title>
+        Robotic Test Automation | Pallavi Reddy Rangasamudram
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+</head>
+
+<body>
+
+
+<!-- NAVIGATION -->
+
+<nav id="navbar">
+
+    <div class="nav-logo">
+        Pallavi<span>.</span>
+    </div>
+
+    <div class="case-nav-back">
+
+        <a href="index.html#projects">
+
+            <i class="fas fa-arrow-left"></i>
+
+            Back to Projects
+
+        </a>
+
+    </div>
+
+</nav>
+
+<main class="case-page">
+
+
+<!-- HERO -->
+
+<section class="case-hero">
+
+    <div class="container">
+
+        <span class="s-tag">
+            MASTER'S THESIS
+        </span>
+
+        <h1>
+            Robotic Test Automation
+            for Automotive Door-Handle Validation
+        </h1>
+
+        <p class="case-lead">
+
+            Development and validation of a robotic test platform
+            for repeatable automotive door-handle testing, progressing
+            from a Braccio proof of concept with a self-developed
+            closed-loop feedback architecture toward integration with
+            an industrial-grade robotic platform.
+
+        </p>
+
+
+        <div class="case-tags">
+
+            <span>Robotics Integration</span>
+            <span>Embedded C/C++</span>
+            <span>CAN / CANoe</span>
+            <span>CAPL</span>
+            <span>Test &amp; Validation</span>
+            <span>Sensor Interaction</span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!--PROJECT OVERVIEW -->
+
+<section class="case-section">
+
+    <div class="container">
+
+        <span class="s-tag">
+            PROJECT OVERVIEW
+        </span>
+
+        <h2>
+            Building a more repeatable way to validate
+            automotive door-handle functions
+        </h2>
+
+        <p>
+            The work focused on developing a robotic approach for
+            repetitive automotive door-handle validation. The objective
+            was not only to automate the physical movement, but also to
+            connect the robotic action with the ECU response so that
+            the system could determine whether the intended interaction
+            had been detected.
+
+        </p>
+        <p>
+            The development was approached in stages. A Braccio robotic
+            arm was first used as a proof of concept to establish the
+            closed-loop testing concept. The validated approach was then
+            extended toward an industrial-grade six-degree-of-freedom
+            robotic platform.
+
+        </p>
+        <div class="case-stats">
+
+            <div>
+
+                <strong>6-DOF</strong>
+
+                <span>
+                    Robotic platform
+                </span>
+
+            </div>
+            <div>
+
+                <strong>C/C++</strong>
+
+                <span>
+                    Embedded control
+                </span>
+
+            </div>
+            <div>
+                <strong>CAN</strong>
+
+                <span>
+                    ECU communication
+                </span>
+
+            </div>
+            <div>
+
+                <strong>CAPL</strong>
+
+                <span>
+                    Test evaluation
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--ENGINEERING CHALLENGE -->
+
+<section class="case-section case-section-alt">
+
+    <div class="container">
+
+        <span class="s-tag">
+            THE ENGINEERING CHALLENGE
+        </span>
+
+        <h2>
+            Physical movement alone was not enough
+        </h2>
+
+        <p>
+            A robotic arm can reproduce a physical movement, but
+            reliable validation requires more than simply commanding
+            the robot to move to a predefined position.
+
+        </p>
+        <p>
+            The robotic action had to be connected to the actual ECU
+            response. The system therefore needed a feedback path that
+            could determine whether the intended sensor interaction had
+            been detected and allow the test sequence to react to that
+            result.
+
+        </p>
+        <div class="case-process">
+
+            <div>
+
+                <strong>01</strong>
+
+                <span>
+                    Execute robotic action
+                </span>
+
+            </div>
+            <div>
+
+                <strong>02</strong>
+
+                <span>
+                    Monitor ECU response
+                </span>
+
+            </div>
+            <div>
+                <strong>03</strong>
+
+                <span>
+                    Evaluate detection
+                </span>
+
+            </div>
+            <div>
+
+                <strong>04</strong>
+
+                <span>
+                    Feed result back
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- BRACCIO POC -->
+
+<section class="case-section">
+
+    <div class="container">
+
+        <span class="s-tag">
+            PHASE 01 · PROOF OF CONCEPT
+        </span>
+
+        <h2>
+            Creating a closed-loop test system around the Braccio
+        </h2>
+        <p>
+            The Braccio six-degree-of-freedom arm was used as the
+            initial proof-of-concept platform. Its purpose was to
+            establish whether robotic motion could be combined with
+            ECU feedback to perform a repeatable validation sequence.
+
+        </p>
+        <p>
+            Since the proof-of-concept setup did not provide the
+            complete feedback behaviour required for the test,
+            the closed-loop logic was developed around the robotic
+            controller and the vehicle communication interface.
+
+        </p>
+        <div class="case-grid-2">
+            <div class="case-card">
+
+                <span class="case-card-number">
+                    HARDWARE
+                </span>
+
+                <h3>
+                    Control &amp; communication
+                </h3>
+
+                <ul>
+
+                    <li>
+                        Braccio 6-DOF robotic arm
+                    </li>
+
+                    <li>
+                        Arduino GIGA R1 controller
+                    </li>
+
+                    <li>
+                        C/C++ firmware
+                    </li>
+
+                    <li>
+                        TJA1051 CAN transceiver
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <div class="case-card">
+
+                <span class="case-card-number">
+                    VALIDATION
+                </span>
+
+                <h3>
+                    Feedback architecture
+                </h3>
+
+                <ul>
+
+                    <li>
+                        CANoe-based ECU monitoring
+                    </li>
+
+                    <li>
+                        CAPL-based detection logic
+                    </li>
+
+                    <li>
+                        CAN feedback to the controller
+                    </li>
+
+                    <li>
+                        Automatic retry behaviour
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+        <div class="case-callout">
+
+            <strong>
+                Closed-loop sequence
+            </strong>
+
+            <p>
+
+                Robot executes the action → ECU response is monitored
+                in CANoe → CAPL evaluates the response → detection
+                status is transmitted back to the controller →
+                the controller reacts to the result.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- BRACCIO RESULT -->
+
+<section class="case-section case-section-alt">
+    <div class="container">
+        <span class="s-tag">
+            PROOF-OF-CONCEPT RESULT
+        </span>
+        <h2>
+            From commanded movement to feedback-driven testing
+        </h2>
+
+        <p>
+          The proof of concept demonstrated that the robotic action
+            could be linked to the ECU response instead of operating
+            as an isolated motion sequence.
+
+        </p>
+        <p>
+            Approach and Unlock actions were automated, a
+            repeatability and reproducibility study was completed,
+            and ECU-state monitoring was integrated through CANoe.
+
+        </p>
+        <div class="case-stats">
+            <div>
+                <strong>POC</strong>
+
+                <span>
+                    Robotic validation concept
+                </span>
+            </div>
+            <div>
+                <strong>R&amp;R</strong>
+
+                <span>
+                    Repeatability study
+                </span>
+            </div>
+
+            <div>
+                <strong>CANoe</strong>
+                <span>
+                    ECU monitoring
+                </span>
+            </div>
+            <div>
+                <strong>Closed Loop</strong>
+                <span>
+                    Feedback validated
+                </span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--END EFFECTOR INVESTIGATION -->
+
+<section class="case-section">
+
+    <div class="container">
+
+        <span class="s-tag">
+            END-EFFECTOR INVESTIGATION
+        </span>
+        <h2>
+            Investigating the material interaction
+            behind reliable sensor triggering
+        </h2>
+        <p>
+            The robotic movement itself was only one part of the
+            problem. The end-effector had to interact with the
+            capacitive sensing area in a way that produced reliable
+            detection.
+
+        </p>
+        <p>
+            An experimental investigation was therefore carried out
+            to compare different probe and material configurations.
+            The testing considered material behaviour together with
+            factors such as applied force, temperature and grounding.
+
+        </p>
+        <div class="case-grid-2">
+            <div class="case-card">
+                <span class="case-card-number">
+                    INVESTIGATION
+                </span>
+
+                <h3>
+                    What was evaluated
+                </h3>
+
+                <ul>
+                    <li>
+                        End-effector probe materials
+                    </li>
+                    <li>
+                        Conductive configurations
+                    </li>
+                    <li>
+                        Force-dependent behaviour
+                    </li>
+                    <li>
+                        Temperature-dependent behaviour
+                    </li>
+                    <li>
+                        Grounding configuration
+                    </li>
+                </ul>
+            </div>
+
+            <div class="case-card">
+                <span class="case-card-number">
+                    OBSERVATION
+                </span>
+                <h3>
+                    Comparing sensor response
+                </h3>
+                <p>
+                    The measurements were used to compare the
+                    consistency of sensor triggering across the
+                    tested configurations rather than treating the
+                    end-effector as a purely mechanical component.
+                </p>
+            </div>
+        </div>
+        <div class="case-callout">
+            <strong>
+                Experimental finding
+            </strong>
+            <p>
+                Among the tested configurations, the Copper Plate +
+                NFC Antenna + Foam grounded arrangement showed the
+                most consistent behaviour in the recorded measurements.
+                Other configurations showed different levels of
+                sensor response and sensitivity to the test conditions.
+            </p>
+        </div>
+        <p class="case-confidential">
+
+            The complete experimental dataset and detailed internal
+            implementation information are not published here.
+        </p>
+    </div>
+</section>
+
+
+<!-- ARCTOS TRANSITION -->
+
+<section class="case-section case-section-alt">
+    <div class="container">
+        <span class="s-tag">
+            PHASE 02 · INDUSTRIAL PLATFORM
+        </span>
+
+        <h2>
+            Extending the validated concept toward Arctos
+        </h2>
+        <p>
+            Once the proof-of-concept approach had been established,
+            the work progressed toward an industrial-grade six-axis
+            robotic platform.
+
+        </p>
+        <p>
+            Unlike the Braccio proof of concept, the Arctos platform
+            provides its own encoder-based closed-loop motor
+            architecture. The focus therefore shifted from creating
+            the basic feedback behaviour around the robot to
+            integrating the validated test concept with a more
+            capable robotic platform.
+
+        </p>
+        <div class="case-grid-2">
+            <div class="case-card">
+                <span class="case-card-number">
+                    BRACCIO · POC
+                </span>
+
+                <h3>
+                    Validate the concept
+                </h3>
+
+                <ul>
+                    <li>
+                        Establish robotic test feasibility
+                    </li>
+                    <li>
+                        Develop feedback logic
+                    </li>
+                    <li>
+                        Integrate CAN communication
+                    </li>
+                    <li>
+                        Validate repeatability
+                    </li>
+                </ul>
+            </div>
+
+            <div class="case-card">
+                <span class="case-card-number">
+                    ARCTOS · PLATFORM
+                </span>
+                <h3>
+                    Extend the approach
+                </h3>
+                <ul>
+                    <li>
+                        Industrial-grade 6-DOF platform
+                    </li>
+                    <li>
+                        Higher torque and repeatability
+                    </li>
+                    <li>
+                        Mechanical integration
+                    </li>
+                    <li>
+                        Calibration and motion validation
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ENGINEERING WORK -->
+
+<section class="case-section">
+    <div class="container">
+
+        <span class="s-tag">
+            ENGINEERING CONTRIBUTION
+        </span>
+        <h2>
+            Working across hardware, software and validation
+        </h2>
+        <p>
+            The project required the robotic system to be treated as
+            an integrated engineering system rather than as an
+            isolated mechanical or software component.
+        </p>
+
+        <div class="case-grid-2">
+            <div class="case-card">
+                <span class="case-card-number">
+                    ROBOTICS
+                </span>
+                <h3>
+                    Mechanical &amp; motion integration
+                </h3>
+                <p>
+                    Robotic-arm integration, motion control,
+                    calibration, repeatability evaluation and
+                    end-effector development.
+                </p>
+            </div>
+
+            <div class="case-card">
+                <span class="case-card-number">
+                    EMBEDDED
+                </span>
+                <h3>
+                    Controller &amp; communication
+                </h3>
+                <p>
+                    C/C++ firmware, Arduino-based control,
+                    CAN communication and feedback handling.
+                </p>
+
+            </div>
+            <div class="case-card">
+                <span class="case-card-number">
+                    VALIDATION
+                </span>
+                <h3>
+                    ECU response &amp; test logic
+                </h3>
+                <p>
+                    CANoe monitoring, CAPL scripting, sensor
+                    detection evaluation and repeatability testing.
+                </p>
+
+            </div>
+            <div class="case-card">
+                <span class="case-card-number">
+                    INTEGRATION
+                </span>
+
+                <h3>
+                    From concept to test platform
+                </h3>
+
+                <p>
+
+                    Connecting mechanical motion, embedded control,
+                    vehicle communication and validation logic into
+                    a single test workflow.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =====================================================
+     ENGINEERING TAKEAWAY
+     ===================================================== -->
+
+<section class="case-section case-section-alt">
+
+    <div class="container">
+
+        <span class="s-tag">
+            ENGINEERING TAKEAWAY
+        </span>
+
+        <h2>
+            Turning robotic motion into
+            feedback-driven validation
+        </h2>
+        <p>
+
+            The main outcome of the work was not simply the integration
+            of a robotic arm. It was the development of a validation
+            approach in which robotic movement, ECU behaviour and test
+            logic could work together as a closed-loop system.
+
+        </p>
+        <p>
+
+            Starting with a proof of concept made it possible to
+            validate the approach before extending it toward a more
+            capable industrial robotic platform.
+
+        </p>
+        <div class="case-callout">
+
+            <strong>
+                What this project represents
+            </strong>
+
+            <p>
+
+                A hands-on engineering workflow spanning robotic
+                integration, embedded control, automotive communication,
+                sensor interaction and automated test validation.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="case-section">
+
+    <div class="container">
+
+        <span class="s-tag">
+            PROJECT NOTE
+        </span>
+
+        <h2>
+            Selected details are intentionally omitted
+        </h2>
+
+        <p class="case-confidential">
+
+            This work was carried out in an industrial development
+            environment. Proprietary implementation details,
+            customer-specific information, internal system
+            configurations and confidential development material
+            have therefore not been published on this portfolio.
+        </p>
+    </div>
+</section>
+</main>
+
+<footer>
+    <div class="container">
+        <p>
+            © 2026 Pallavi Reddy Rangasamudram
+        </p>
+    </div>
+</footer>
+
+</body>
+</html>
