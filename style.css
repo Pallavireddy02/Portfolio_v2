@@ -3391,3 +3391,18 @@ footer span { color:var(--accent-l); }
 @media(max-width:700px){
     .case-grid-2{ grid-template-columns:1fr; }
 }
+/* Contact form: visible text on a dark field */
+.finput{
+    background:rgba(255,255,255,.04);
+    border:1px solid var(--border);
+    color:var(--text);
+    caret-color:var(--accent-l);
+}
+textarea.finput{ resize:vertical; min-height:120px; }
+.finput::placeholder{ color:var(--muted); opacity:.7; }
+.finput:-webkit-autofill,
+.finput:-webkit-autofill:focus{
+    -webkit-text-fill-color:var(--text);
+    -webkit-box-shadow:0 0 0 1000px #1b212b inset;
+    transition:background-color 9999s ease-out;
+}
