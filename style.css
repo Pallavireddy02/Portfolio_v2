@@ -2109,6 +2109,13 @@ body {
 
     z-index: 2;
 }
+/* EXPERIENCE — subtle job location */
+.timeline-heading{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap:20px;
+}
 
 
 /* =========================================
@@ -2130,7 +2137,26 @@ body {
     letter-spacing: .3px;
     line-height: 1.4;
 }
+.timeline-year{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    width:100%;
+    box-sizing:border-box;
+}
 
+.timeline-date{
+    color:#d98a4f;
+    font-weight:600;
+}
+
+.timeline-location{
+    color:#d98a4f;
+    font-size:0.82rem;
+    font-weight:500;
+    white-space:nowrap;
+    margin-left:auto;
+}
 
 /* =========================================
    EXPERIENCE CONTENT
