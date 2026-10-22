@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CAL Inheritance in Codebeamer | Pallavi Reddy Rangasamudram</title>
+    <title>Automated CAL Inheritance | Pallavi Reddy Rangasamudram</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
@@ -23,19 +23,21 @@
 <!-- HERO -->
 <section class="case-hero">
     <div class="container">
-        <span class="s-tag">MASTER'S PROJECT THESIS · GRADE 1.3</span>
-        <h1>Cybersecurity Assurance Level (CAL) Inheritance in Codebeamer</h1>
+        <span class="s-tag">MASTER'S PROJECT THESIS · OTH REGENSBURG · GRADE 1.3</span>
+        <h1>Automated CAL Inheritance across the ASPICE V-Model</h1>
         <p class="case-lead">
-            Carried out during my automotive cybersecurity internship at
-            Minebea AccessSolutions (Jul – Oct 2024): correcting and extending
-            how CAL values are inherited and derived across linked requirements
-            in Codebeamer ALM, in line with ISO/SAE 21434.
+            Cybersecurity Assurance Level (CAL) propagation in Codebeamer ALM,
+            implemented in a live automotive customer project during my
+            cybersecurity internship at Minebea AccessSolutions. A CAL assigned
+            from the threat analysis now follows the trace links from stakeholder
+            requirements down to software detailed design.
         </p>
         <div class="case-tags">
             <span>Codebeamer ALM</span>
-            <span>Automotive Cybersecurity</span>
             <span>ISO/SAE 21434</span>
+            <span>ASPICE V-Model</span>
             <span>TARA</span>
+            <span>UEL Computed Fields</span>
             <span>Traceability</span>
         </div>
     </div>
@@ -45,17 +47,17 @@
 <section class="case-section">
     <div class="container">
         <span class="s-tag">THE PROBLEM</span>
-        <h2>One CAL value, many linked artifacts</h2>
+        <h2>One CAL value, six layers of requirements</h2>
         <p>
-            A Cybersecurity Assurance Level is assigned from the threat analysis
-            and risk assessment (TARA) and has to stay consistent as requirements
-            are refined from stakeholder level down to system and software level.
+            Under ISO/SAE 21434, a CAL is determined from the threat analysis
+            and risk assessment (TARA), based on impact and attack vector. It sets
+            how rigorously everything derived from that requirement must be
+            developed and tested.
         </p>
         <p>
-            In the project's Codebeamer setup, the existing CAL field and its
-            inheritance did not carry values reliably, and the system trackers
-            had no CAL field at all. Keeping the values aligned meant entering
-            them by hand at each level.
+            Maintained by hand, the value has to be re-entered at every level of
+            the V-model. A requirement rated CAL&nbsp;3 can end up as CAL&nbsp;1
+            two layers further down, and the mismatch only surfaces in an audit.
         </p>
     </div>
 </section>
@@ -64,17 +66,18 @@
 <section class="case-section case-section-alt">
     <div class="container">
         <span class="s-tag">APPROACH</span>
-        <h2>Following the existing trace links</h2>
+        <h2>Let the trace links carry the CAL</h2>
         <p>
-            Instead of adding a separate mechanism, the work used the reference
-            links that already connect requirements in Codebeamer. A CAL value set
-            at the top of the chain could then be read by every linked item below it.
+            The CAL is entered once, at stakeholder level. Every tracker below it
+            reads the value from its linked upstream items instead of storing its own.
         </p>
-        <div class="case-process">
-            <div><strong>01</strong><span>CAL assigned from TARA</span></div>
-            <div><strong>02</strong><span>Stakeholder requirements</span></div>
-            <div><strong>03</strong><span>System requirements</span></div>
-            <div><strong>04</strong><span>Downstream system and software items</span></div>
+        <div class="case-stats">
+            <div><strong>01 Stakeholder Requirements</strong><span>CAL set from TARA: choice list CAL-1 to CAL-4, or No CAL</span></div>
+            <div><strong>02 System Requirements</strong><span>Inherited from stakeholder requirements or cybersecurity goals</span></div>
+            <div><strong>03 System Architecture</strong><span>Computed from the linked system requirement</span></div>
+            <div><strong>04 SW Requirements</strong><span>Highest CAL across all linked upstream items</span></div>
+            <div><strong>05 SW Architecture</strong><span>Consolidates upstream values, with fallback</span></div>
+            <div><strong>06 SW Detailed Design</strong><span>Mapped from SW architecture</span></div>
         </div>
     </div>
 </section>
@@ -83,24 +86,28 @@
 <section class="case-section">
     <div class="container">
         <span class="s-tag">IMPLEMENTATION</span>
-        <h2>What I changed in Codebeamer</h2>
+        <h2>What I configured in Codebeamer</h2>
         <div class="case-grid-2">
             <div class="case-card">
-                <span class="case-card-number">01 · CORRECT</span>
-                <h3>CAL field and inheritance</h3>
-                <p>Fixed the existing CAL field and its inheritance so values flow correctly along the reference links.</p>
+                <span class="case-card-number">01 · FIELD</span>
+                <h3>Custom CAL field</h3>
+                <p>A shared choice list (CAL-1 to CAL-4, No CAL) added to the stakeholder requirements tracker, reusable across trackers.</p>
             </div>
             <div class="case-card">
-                <span class="case-card-number">02 · EXTEND</span>
-                <h3>System trackers</h3>
-                <p>Added a CAL field to the system trackers, with computed derivation from the linked higher-level items.</p>
+                <span class="case-card-number">02 · LINKS</span>
+                <h3>Intermediate reference fields</h3>
+                <p>Reference fields connecting each tracker to its upstream layer, including a goals-and-claims tracker that justifies each CAL.</p>
             </div>
-        </div>
-        <div class="case-tags">
-            <span>Custom fields</span>
-            <span>Computed fields</span>
-            <span>Reference links</span>
-            <span>Tracker configuration</span>
+            <div class="case-card">
+                <span class="case-card-number">03 · LOGIC</span>
+                <h3>Computed fields in UEL</h3>
+                <p>CAL fields written as User Expression Language computations, so upstream changes appear downstream without manual edits.</p>
+            </div>
+            <div class="case-card">
+                <span class="case-card-number">04 · RULE</span>
+                <h3>Highest CAL wins</h3>
+                <p>Where an item links to several upstream sources, a max() rule over the linked artifacts keeps the most demanding CAL.</p>
+            </div>
         </div>
     </div>
 </section>
@@ -109,32 +116,34 @@
 <section class="case-section case-section-alt">
     <div class="container">
         <span class="s-tag">RESULT</span>
-        <h2>Change it once, see it everywhere</h2>
+        <h2>One value, entered once, carried through</h2>
         <p>
-            A change to the originating CAL value now shows up in the linked items
-            instead of being maintained separately at every level, and each value
-            can be traced back to the cybersecurity assessment it came from.
+            Reviewing a sample trace chain, a CAL&nbsp;4 assigned to a stakeholder
+            requirement reached all five downstream layers unchanged, and each
+            value could be traced back to the requirement it came from.
         </p>
         <div class="case-stats">
-            <div><strong>CAL</strong><span>Inherited and derived along trace links</span></div>
-            <div><strong>Manual</strong><span>Re-entry at each level removed</span></div>
-            <div><strong>Traceability</strong><span>Back to the TARA result</span></div>
+            <div><strong>6 layers</strong><span>Stakeholder requirements to SW detailed design</span></div>
+            <div><strong>CAL 4</strong><span>Carried end-to-end on the sample chain</span></div>
+            <div><strong>1 entry</strong><span>Manual input only at stakeholder level</span></div>
         </div>
     </div>
 </section>
 
-<!-- TAKEAWAY -->
+<!-- LIMITS -->
 <section class="case-section">
     <div class="container">
-        <span class="s-tag">ENGINEERING TAKEAWAY</span>
-        <h2>Cybersecurity decisions as traceable engineering data</h2>
+        <span class="s-tag">LIMITS &amp; NEXT STEPS</span>
+        <h2>Inheritance is only as good as the links</h2>
         <p>
-            The main lesson was not storing a CAL value but understanding how it
-            moves through the development structure, and letting the tool keep
-            that relationship instead of people.
+            If a requirement is not linked to its parent, its CAL is not inherited,
+            and nothing warns about it. The next steps proposed in the thesis were
+            automated link checks that flag orphaned items, and synchronising CAL
+            values with the TARA tool so risk ratings and requirements stay aligned.
         </p>
         <p class="case-confidential">
-            Project names and internal configuration details are not published here.
+            Implemented in a confidential customer project. Project names, item IDs
+            and the exact field expressions are not published here.
         </p>
     </div>
 </section>
