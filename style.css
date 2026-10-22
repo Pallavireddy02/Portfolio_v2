@@ -3310,4 +3310,84 @@ footer span { color:var(--accent-l); }
     }
 }
 @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
+/* =========================================================
+   FIXES: project card labels, card tags, case-study cards
+   ========================================================= */
 
+/* Card label: undo the featured-thesis box styles */
+.proj-body .proj-featured{
+    width:auto;
+    margin:0 0 9px;
+    padding:0;
+    border:none;
+    border-radius:0;
+    background:none;
+    overflow:visible;
+    box-shadow:none;
+    transform:none;
+}
+
+/* Tags inside the smaller project cards */
+.proj-body .proj-tags{
+    display:flex;
+    flex-wrap:wrap;
+    gap:7px;
+}
+.proj-body .proj-tag{
+    display:inline-flex;
+    align-items:center;
+    padding:5px 9px;
+    border:1px solid rgba(198,124,78,.22);
+    border-radius:6px;
+    background:rgba(198,124,78,.035);
+    color:var(--text-light);
+    font-size:.62rem;
+    font-weight:600;
+    line-height:1.35;
+}
+
+/* Two-column cards on the case-study pages */
+.case-grid-2{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:14px;
+    margin:30px 0 8px;
+}
+.case-card{
+    padding:22px;
+    border:1px solid rgba(255,255,255,.075);
+    border-radius:14px;
+    background:rgba(255,255,255,.025);
+}
+.case-card-number{
+    display:block;
+    margin-bottom:12px;
+    font-family:"JetBrains Mono",monospace;
+    font-size:.65rem;
+    font-weight:600;
+    letter-spacing:.12em;
+    color:var(--accent-l);
+}
+.case-card h3{
+    margin:0 0 10px;
+    font-size:1rem;
+    line-height:1.35;
+    color:var(--text);
+}
+.case-card ul{
+    margin:0;
+    padding-left:18px;
+    font-size:.85rem;
+    line-height:1.75;
+    color:var(--muted);
+}
+.case-card p{
+    margin:0 !important;
+    font-size:.84rem !important;
+    line-height:1.65 !important;
+    color:var(--muted) !important;
+}
+
+@media(max-width:700px){
+    .case-grid-2{ grid-template-columns:1fr; }
+}

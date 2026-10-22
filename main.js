@@ -202,11 +202,8 @@ document.addEventListener("DOMContentLoaded",()=>{
     initNavbar();
     initMobileMenu();
     initSmoothScroll();
-    initReveal();
-    initSkillBars();
     initVideoModal();
     initCertLightbox();
-    initContactForm();
 })
 /* ========= Dynamic Background ========= */
 
