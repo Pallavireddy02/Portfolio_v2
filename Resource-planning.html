@@ -112,6 +112,11 @@
         <h2>Capacity per milestone and domain, without manual totals</h2>
         <p>
             Changing a milestone window or a domain percentage updates the
+            available story points and the chart immediately. Along the way I
+            solved two recurring issues: a type mismatch when reading values
+            through linked trackers, fixed with an aggregate function, and columns
+            calculating outside the selected range, fixed with guard conditions
+            per column. I documented both for the team and presented the system
             with user stories and role views. To show my team lead how the
             computed values come about, I also charted one team member's story
             points against planned workload per sprint: wherever the workload line
