@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resource Planning in Codebeamer | Pallavi Reddy Rangasamudram</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav id="navbar">
+    <div class="nav-logo">Pallavi<span>.</span></div>
+    <div class="case-nav-back">
+        <a href="index.html#projects"><i class="fas fa-arrow-left"></i> Back to Projects</a>
+    </div>
+</nav>
+
+<main class="case-page">
+
+<!-- HERO -->
+<section class="case-hero">
+    <div class="container">
+        <span class="s-tag">WORKING STUDENT · ELECTRONICS DEVELOPMENT · MINEBEA ACCESSSOLUTIONS</span>
+        <h1>Resource Planning in Codebeamer</h1>
+        <p class="case-lead">
+            A capacity planning system built inside Codebeamer ALM for the
+            electronics development team. Team members log their availability per
+            sprint, and project managers and team leads see the totals per
+            milestone and domain without collecting them by hand.
+        </p>
+        <div class="case-tags">
+            <span>Codebeamer ALM</span>
+            <span>UEL Computed Fields</span>
+            <span>Tracker Design</span>
+            <span>Resource Planning</span>
+            <span>Wiki Charts</span>
+        </div>
+    </div>
+</section>
+
+<!-- PROBLEM -->
+<section class="case-section">
+    <div class="container">
+        <span class="s-tag">THE PROBLEM</span>
+        <h2>Who is available, for which domain, in which milestone?</h2>
+        <p>
+            Project managers assign work by domain and milestone, while team leads
+            plan sprint by sprint. Availability, holidays and trainings were known
+            to each person, but there was no single place where capacity could be
+            added up for a given milestone and split by domain.
+        </p>
+    </div>
+</section>
+
+<!-- APPROACH -->
+<section class="case-section case-section-alt">
+    <div class="container">
+        <span class="s-tag">APPROACH</span>
+        <h2>Log once, compute everywhere</h2>
+        <p>
+            Starting from the team's concept, I defined three user roles and their
+            user stories, and a simple unit: one working day equals 8 story points,
+            one two-week sprint 80 story points.
+        </p>
+        <div class="case-stats">
+            <div><strong>Team Members tracker</strong><span>Each person logs available story points for all 26 sprint periods of a year</span></div>
+            <div><strong>Milestone tracker</strong><span>Start and end year and sprint define the milestone window</span></div>
+            <div><strong>Resource planning table</strong><span>Domain, assigned team members and required percentage per domain</span></div>
+            <div><strong>Computed totals</strong><span>Available story points per domain, calculated only within the selected window</span></div>
+        </div>
+    </div>
+</section>
+
+<!-- IMPLEMENTATION -->
+<section class="case-section">
+    <div class="container">
+        <span class="s-tag">IMPLEMENTATION</span>
+        <h2>What I built in Codebeamer</h2>
+        <div class="case-grid-2">
+            <div class="case-card">
+                <span class="case-card-number">01 · TRACKERS</span>
+                <h3>Two linked trackers</h3>
+                <p>Team members with one item per year, and milestones that reference them through choice fields.</p>
+            </div>
+            <div class="case-card">
+                <span class="case-card-number">02 · LOGIC</span>
+                <h3>Computed fields in UEL</h3>
+                <p>Sums each member's story points across the selected sprint and year range, then applies the domain percentage.</p>
+            </div>
+            <div class="case-card">
+                <span class="case-card-number">03 · CHART</span>
+                <h3>Automatic domain chart</h3>
+                <p>A wiki field builds a pie chart of available story points per domain directly from the planning table.</p>
+            </div>
+            <div class="case-card">
+                <span class="case-card-number">04 · VIEWS</span>
+                <h3>Three role views</h3>
+                <p>Project manager, team lead and team member each get filtered views by person, sprint or domain.</p>
+            </div>
+        </div>
+        <img class="case-img" src="Media/Documents/rp_milestone_table_pie.png" alt="Resource planning table and pie chart in the milestone tracker (sample data)">
+    </div>
+</section>
+
+<!-- RESULT -->
+<section class="case-section case-section-alt">
+    <div class="container">
+        <span class="s-tag">RESULT</span>
+        <h2>Capacity per milestone and domain, without manual totals</h2>
+        <p>
+            Changing a milestone window or a domain percentage updates the
+            available story points and the chart immediately. Along the way I
+            solved two recurring issues: a type mismatch when reading values
+            through linked trackers, fixed with an aggregate function, and columns
+            calculating outside the selected range, fixed with guard conditions
+            per column. I documented both for the team and presented the system
+            with user stories and role views.
+        </p>
+        <img class="case-img" src="Media/Documents/rp_capacity_per_sprint.png" alt="Available story points per team member and sprint (sample data)">
+        <div class="case-stats">
+            <div><strong>26 sprints</strong><span>Per year, per team member</span></div>
+            <div><strong>3 roles</strong><span>Project manager, team lead, team member</span></div>
+            <div><strong>1 entry</strong><span>Availability logged once, used in every milestone</span></div>
+        </div>
+        <p class="case-confidential">
+            All screenshots and charts show sample data from a test environment.
+            No project names or real team data are published here.
+        </p>
+    </div>
+</section>
+
+</main>
+
+<footer>
+    <div class="container"><p>© 2026 Pallavi Reddy Rangasamudram</p></div>
+</footer>
+
+</body>
+</html>
